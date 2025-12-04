@@ -11,9 +11,9 @@
 }
 
 .section-title {
-  font-size: var(--text-3xl);
+  font-size: var(--text-5xl);
   font-weight: 700;
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-5xl);
   text-align: center;
 }
 
@@ -30,10 +30,19 @@
   overflow: hidden;
 }
 
+.hero-sticker {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-12deg);
+  width: 325px;
+  z-index: 0;
+  pointer-events: none;
+}
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  background: #e3e7f0;
   z-index: -1;
 }
 

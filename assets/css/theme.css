@@ -1,4 +1,8 @@
 :root {
+  font-size: 12px; /* valor de 1rem */
+}
+
+:root {
   /*
 	 * FLUID TYPOGRAPHY SCALE
 	 *
@@ -42,11 +46,10 @@
   --space-md: clamp(1rem, 0.8rem + 1vw, 1.5rem); /* 16px → 24px */
   --space-lg: clamp(1.5rem, 1.2rem + 1.5vw, 2.5rem); /* 24px → 40px */
   --space-xl: clamp(2rem, 1.5rem + 2.5vw, 4rem); /* 32px → 64px */
-  --space-2xl: clamp(
-    3rem,
-    2rem + 5vw,
-    6rem
-  ); /* 48px → 96px (section padding) */
+  --space-2xl: clamp(3rem, 2rem + 5vw, 6rem); /* 48px → 96px */
+  --space-3xl: clamp(4rem, 3rem + 8vw, 8rem); /* 64px → 128px */
+  --space-4xl: clamp(6rem, 4rem + 12vw, 12rem); /* 96px → 192px */
+  --space-5xl: clamp(8rem, 5rem + 16vw, 16rem); /* 128px → 256px */
 
   /*
 	 * COLOR PALETTE
@@ -54,12 +57,12 @@
 	 * Dark theme with indigo accent. Limited palette = cohesive design.
 	 * Semantic naming (bg, text, accent) makes colors self-documenting.
 	 */
-  --color-bg: #0f0f0f; /* Near-black background */
-  --color-bg-alt: #1a1a1a; /* Slightly lighter for depth/sections */
-  --color-text: #f5f5f5; /* Off-white for readability (not pure white) */
-  --color-text-muted: #a0a0a0; /* Subdued text for secondary content */
-  --color-accent: #6366f1; /* Indigo — primary brand color */
-  --color-accent-hover: #818cf8; /* Lighter indigo for hover states */
+  --color-bg: #e3e7f0; /* background */
+  --color-bg-alt: #e3e7f0; /*depth/sections */
+  --color-text: #1f1402;
+  --color-text-muted: #1f1402; /* Subdued text for secondary content */
+  --color-accent: #ff00fe; /* primary brand color */
+  --color-accent-hover: #1f1402; /* hover states */
 
   /*
 	 * ANIMATION TOKENS
