@@ -1,5 +1,6 @@
-/*the barrel pattern: one entry point for all css files*/
-@import url("reset.css"); /* CSS Reset for browser compatibility */
+@import url("reset.css");
+@import url("theme.css");
 @import url("base.css");
-@import url("layout.css"); /* Main styles */
-@import url("components.css"); /* Reusable components */
+@import url("navigation.css");
+@import url("layout.css");
+@import url("components.css");
