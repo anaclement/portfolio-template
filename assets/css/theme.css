@@ -1,5 +1,5 @@
 :root {
-  font-size: 12px; /* valor de 1rem */
+  font-size: 13px; /* valor de 1rem */
 }
 
 :root {
@@ -58,11 +58,11 @@
 	 * Semantic naming (bg, text, accent) makes colors self-documenting.
 	 */
   --color-bg: #e3e7f0; /* background */
-  --color-bg-alt: #e3e7f0; /*depth/sections */
+  --color-bg-alt: #d4dae8; /*depth/sections */
   --color-text: #1f1402;
   --color-text-muted: #1f1402; /* Subdued text for secondary content */
-  --color-accent: #ff00fe; /* primary brand color */
-  --color-accent-hover: #1f1402; /* hover states */
+  --color-accent: #9c63fa; /* primary brand color */
+  --color-accent-hover: #af89fb; /* hover states */
 
   /*
 	 * ANIMATION TOKENS
