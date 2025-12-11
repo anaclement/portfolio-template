@@ -30,15 +30,60 @@
   overflow: hidden;
 }
 
-.hero-sticker {
+/* --- Hero stickers --- */
+.hero-images {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-12deg);
-  width: 325px;
-  z-index: 0;
-  pointer-events: none;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none; /* bloquear clics en tu título */
+  z-index: 0; /* imágenes detrás del título */
 }
+
+.hero-img {
+  width: 325px;
+  max-width: 40vw;
+  position: absolute;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+/* purple sticker */
+.hero-img-top {
+  z-index: 3;
+  transform: translateX(50px) rotate(12deg); /* separación */
+  --rotation: 10deg;
+}
+
+/* green sticker */
+.hero-img-bottom {
+  z-index: 2;
+  transform: translateX(-50px) rotate(-12deg); /* separación */
+  --rotation: -10deg;
+}
+
+/* Hover de escala */
+.hero-img:hover {
+  transform: scale(1.08) rotate(var(--rotation));
+}
+
+/* Ajuste rotación */
+.hero-img-top {
+  --rotation: 8deg;
+}
+.hero-img-bottom {
+  --rotation: -8deg;
+}
+
+/* Opcional: efecto suave en móviles */
+@media (max-width: 600px) {
+  .hero-img {
+    width: 200px;
+  }
+}
+
 .hero-bg {
   position: absolute;
   inset: 0;
@@ -150,7 +195,7 @@
   display: inline-block;
   padding: var(--space-sm) var(--space-lg);
   background: var(--color-accent);
-  color: #e3e7f0;
+  color: #fffeec;
   font-weight: 600;
   border-radius: 20px;
   border: solid #e3e7f0 1px;
@@ -165,7 +210,7 @@
    7. About Section
    -------------------------------------------------------------------------- */
 .about {
-  background: var(--color-bg-alt);
+  background: #fcfcfd;
 }
 
 .about-grid {
