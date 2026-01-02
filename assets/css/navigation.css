@@ -7,9 +7,9 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background: #e3e7f0;
+  background: var(--color-bg);
   padding: 0.5rem;
-  border: solid #1f1402 1px;
+  border: solid var(--color-text) 1px;
 }
 
 .nav-container {
@@ -24,8 +24,8 @@
 
 .nav-logo {
   font-size: var(--text-xl);
-  font-weight: 700;
-  color: #1f1402;
+  font-weight: 800;
+  color: var(--color-text);
   align-items: center;
 }
 
@@ -35,13 +35,12 @@
   right: 0;
   gap: var(--space-lg);
   list-style: none;
-  color: #1f1402;
+  color: var(--color-text);
 }
 
 .nav-links a {
   color: var(--color-text-muted);
   transition: color 0.3s;
-  color: #1f1402;
 }
 
 .nav-links a:hover,

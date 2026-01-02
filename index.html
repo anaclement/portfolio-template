@@ -34,31 +34,38 @@
       <!-- Hero Section -->
       <section id="hero" class="hero">
         <div class="hero-bg parallax-bg"></div>
-        <div class="hero-images">
+        <div class="hero-content">
+          <h1 class="hero-title">DESIGNER NAME</h1>
+
+          <div class="hero-row">
+            <p class="hero-subtitle">GRAPHIC & MULTIMEDIA DESIGNER</p>
+            <a href="#about" class="btn">↓</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="hero-images">
+        <a href="#about">
           <img
-            src="https://ik.imagekit.io/anaclement/portfolio%20template/my%20work.svg"
+            src="https://ik.imagekit.io/anaclement/Recurso%201.svg?updatedAt=1764859335324"
             alt="purple sticker"
             class="hero-img hero-img-top"
           />
+        </a>
+
+        <a href="#projects">
           <img
-            src="https://ik.imagekit.io/anaclement/portfolio%20template/about%20me.svg"
+            src="https://ik.imagekit.io/anaclement/portfolio%20template/five.png"
             alt="green sticker"
             class="hero-img hero-img-bottom"
           />
-        </div>
-        <div class="hero-content">
-          <h1 class="hero-title animate-on-scroll">DESIGNER NAME</h1>
-          <p class="hero-subtitle animate-on-scroll">
-            Graphic & Multimedia Designer
-          </p>
-          <a href="#about" class="btn animate-on-scroll">↓</a>
-        </div>
-      </section>
+        </a>
+      </div>
 
       <!-- About Section -->
       <section id="about" class="section about">
         <div class="container">
-          <h1 class="section-title animate-on-scroll">About Me</h1>
+          <h1 class="section-title animate-on-scroll">ABOUT ME</h1>
           <div class="about-grid">
             <div class="about-text animate-on-scroll">
               <p>
@@ -107,10 +114,30 @@
         </div>
       </section>
 
+      <div class="ticker">
+        <div class="ticker__track">
+          <span
+            >GRAPHIC · BRANDING · EDITORIAL · WEBSITE · MOTION · ILLUSTRATION ✶
+          </span>
+          <span
+            >GRAPHIC · BRANDING · EDITORIAL · WEBSITE · MOTION · ILLUSTRATION ✶
+          </span>
+          <span
+            >GRAPHIC · BRANDING · EDITORIAL · WEBSITE · MOTION · ILLUSTRATION ✶
+          </span>
+          <span
+            >GRAPHIC · BRANDING · EDITORIAL · WEBSITE · MOTION · ILLUSTRATION ✶
+          </span>
+          <span
+            >GRAPHIC · BRANDING · EDITORIAL · WEBSITE · MOTION · ILLUSTRATION ✶
+          </span>
+        </div>
+      </div>
+
       <!-- Projects Section -->
       <section id="projects" class="section projects">
         <div class="container">
-          <h2 class="section-title animate-on-scroll">Featured Projects</h2>
+          <h2 class="section-title animate-on-scroll">WORKS 2025</h2>
           <div class="projects-grid" data-reveal-stagger>
             <article class="project-card">
               <div class="project-image">
@@ -172,7 +199,7 @@
       <!-- Contact Section -->
       <section id="contact" class="section contact">
         <div class="container">
-          <h2 class="section-title animate-on-scroll">Get In Touch</h2>
+          <h2 class="section-title animate-on-scroll">DESIGNER NAME</h2>
           <div class="contact-content animate-on-scroll">
             <p>
               Interested in working together? Let's talk about your project.
@@ -181,9 +208,9 @@
               >Say Hello</a
             >
             <div class="social-links">
-              <a href="#" aria-label="GitHub">GitHub</a>
-              <a href="#" aria-label="LinkedIn">LinkedIn</a>
-              <a href="#" aria-label="Twitter">Twitter</a>
+              <a href="#" aria-label="GitHub">GITHUB</a>
+              <a href="#" aria-label="LinkedIn">LINKEDIN</a>
+              <a href="#" aria-label="Twitter">MAIL</a>
             </div>
           </div>
         </div>
@@ -194,8 +221,17 @@
     <footer class="footer">
       <div class="container">
         <p>&copy; 2025 Jane Developer. Built with vanilla HTML, CSS & JS.</p>
+        <button id="theme-toggle" aria-label="Toggle dark mode">○</button>
         <a href="#hero" class="back-to-top" aria-label="Back to top">↑</a>
       </div>
     </footer>
+    <script>
+      const toggle = document.getElementById("theme-toggle");
+      const root = document.documentElement;
+
+      toggle.addEventListener("click", () => {
+        root.classList.toggle("dark");
+      });
+    </script>
   </body>
 </html>
