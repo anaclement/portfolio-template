@@ -12,6 +12,12 @@
   margin-bottom: var(--space-xl);
 }
 
+.section-title2 {
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  margin-bottom: var(--space-2xl);
+}
+
 /* --------------------------------------------------------------------------
    5. Hero Section
    -------------------------------------------------------------------------- */
@@ -34,6 +40,42 @@
   text-align: left;
   white-space: nowrap;
   box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------------
+   Hero typing effect
+-------------------------------------------------------------------------- */
+
+.hero-title--typing {
+  position: relative;
+}
+
+/* Texto que se escribe */
+.typing-text {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* Cursor */
+.typing-text::after {
+  content: "|";
+  display: inline-block;
+  margin-left: 0.1em;
+  animation: blink 1s steps(1) infinite;
+}
+
+/* Cursor parpadeo */
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Accesibilidad: reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .typing-text::after {
+    animation: none;
+  }
 }
 
 .hero-content {
@@ -251,18 +293,19 @@
    -------------------------------------------------------------------------- */
 .about {
   background: var(--color-bg);
-  padding-bottom: var(--space-4xl);
+  padding-bottom: var(--space-3xl);
+  padding-top: var(--space-xl);
 }
 
 .about-grid {
   display: grid;
-  gap: var(--space-2xl);
+  gap: var(--space-3xl);
 }
 
 @media (min-width: 768px) {
   .about-grid {
-    grid-template-columns: 1fr 1fr;
-    align-items: start;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
   }
 }
 
@@ -279,8 +322,8 @@
 
 .skill-card {
   background: var(--color-bg-alt);
-  padding: var(--space-md);
-  border-radius: 12px;
+  padding: var(--space-lg);
+  border-radius: 8px;
   text-align: center;
 }
 
@@ -291,7 +334,7 @@
 
 .skill-bar {
   height: 6px;
-  background: var(--color-bg-alt);
+  background: var(--color-bg);
   border-radius: 3px;
   overflow: hidden;
 }
@@ -486,22 +529,6 @@
   z-index: 1;
 }
 
-.contact-visual {
-  position: relative;
-  width: min(350px, 90vw);
-  aspect-ratio: 1 / 1;
-
-  display: grid;
-  place-items: center;
-  z-index: 1;
-}
-
-.contact-visual img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
 .contact-text {
   position: absolute;
   inset: 0;
@@ -516,9 +543,32 @@
   transform: translateY(-8%);
 }
 
+.contact-text h5 {
+  font-size: var(--text-xl);
+  margin: 0;
+  color: var(--color-text);
+  font-weight: 800;
+}
+
 .contact-text p {
   font-size: var(--text-md);
   color: var(--color-text-muted);
+}
+
+.contact-visual {
+  position: relative;
+  width: min(350px, 90vw);
+  aspect-ratio: 1 / 1;
+
+  display: grid;
+  place-items: center;
+  z-index: 1;
+}
+
+.contact-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .site-footer {

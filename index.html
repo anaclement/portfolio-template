@@ -57,7 +57,9 @@
       <section id="hero" class="hero">
         <div class="hero-bg parallax-bg"></div>
         <div class="hero-content">
-          <h1 class="hero-title">DESIGNER NAME</h1>
+          <h1 class="hero-title hero-title--typing">
+            <span class="typing-text" data-text="DESIGNER NAME" aria-label="DESIGNER NAME"></span>
+          </h1>
 
           <div class="hero-row">
             <p class="hero-subtitle">GRAPHIC & MULTIMEDIA DESIGNER</p>
@@ -66,7 +68,7 @@
         </div>
       </section>
 
-      <div class="hero-images">
+      <div class="hero-images animate-on-scroll">
         <a href="#projects">
           <img
             src="https://ik.imagekit.io/anaclement/portfolio%20template/one_1.svg?updatedAt=1765913956493"
@@ -87,42 +89,37 @@
       <!-- About Section -->
       <section id="about" class="section about">
         <div class="container">
-          <h1 class="section-title animate-on-scroll">ABOUT ME</h1>
+          <h1 class="section-title2 animate-on-scroll">ABOUT ME</h1>
           <div class="about-grid">
             <div class="about-text animate-on-scroll">
               <p>
-                I'm a passionate front-end developer with 5 years of experience
-                building responsive, accessible, and performant web
-                applications.
-              </p>
+                Lorem ipsum dolor sit amet consectetur adipiscing elit congue dictum in, inceptos platea quam ut sem nullam facilisis ultrices sed, posuere tempus risus.
               <p>
-                My focus is on creating seamless user experiences through clean
-                code and thoughtful design. I believe in the power of vanilla
-                JavaScript and modern CSS to create stunning interfaces without
-                framework bloat.
+                Erat justo sociis mollis non nisl vulputate turpis, auctor aptent sem vehicula quam consequat dis lectus, suscipit pellentesque euismod convallis molestie hac. Gravida cras tincidunt ad convallis odio tempus bibendum sociis, cubilia est purus facilisi vehicula dictum parturient, praesent rutrum quis. 
+              </p>
               </p>
             </div>
             <div class="skills-grid" data-reveal-stagger>
               <div class="skill-card">
-                <h3>CSS/Sass</h3>
-                <div class="skill-bar">
-                  <div class="skill-fill" style="--fill: 95%"></div>
-                </div>
-              </div>
-              <div class="skill-card">
-                <h3>JavaScript</h3>
+                <h3>ADOBE SUITE</h3>
                 <div class="skill-bar">
                   <div class="skill-fill" style="--fill: 90%"></div>
                 </div>
               </div>
               <div class="skill-card">
-                <h3>Responsive</h3>
+                <h3>AUDIOVISUALS</h3>
                 <div class="skill-bar">
-                  <div class="skill-fill" style="--fill: 98%"></div>
+                  <div class="skill-fill" style="--fill: 85%"></div>
                 </div>
               </div>
               <div class="skill-card">
-                <h3>A11y</h3>
+                <h3>3D DESIGN</h3>
+                <div class="skill-bar">
+                  <div class="skill-fill" style="--fill: 75%"></div>
+                </div>
+              </div>
+              <div class="skill-card">
+                <h3>WEB DEVELOPMENT</h3>
                 <div class="skill-bar">
                   <div class="skill-fill" style="--fill: 85%"></div>
                 </div>
@@ -162,7 +159,7 @@
       <h2 class="section-title animate-on-scroll">WORKS 2025</h2>
     </div>
 
-    <div class="projects-carousel">
+    <div class="projects-carousel animate-on-scroll">
       <article class="project-card">
         <div class="project-image">
           <img src="https://ik.imagekit.io/anaclement/portfolio%20template/imagen%20example.svg" alt="web design project. image example" />
@@ -256,14 +253,14 @@
   </div>
 
   <!-- ===== BLOQUE 2 · ARCHIVE (REVERSE) ===== -->
-  <div class="projects-block projects-block--reverse">
+  <div class="projects-block projects-block--reverse ">
 
     <div class="container">
-      <h2 class="section-title section-title--right">ARCHIVE 2020'S</h2>
+      <h2 class="section-title section-title--right animate-on-scroll">ARCHIVE 2020'S</h2>
     </div>
 
 
-    <div class="projects-carousel projects-carousel--reverse">
+    <div class="projects-carousel projects-carousel--reverse animate-on-scroll">
       <article class="project-card">
         <div class="project-image">
           <img src="https://ik.imagekit.io/anaclement/portfolio%20template/imagen%20example.svg" alt="web design project. image example" />
@@ -365,14 +362,14 @@
       <!-- Contact Section -->
 
 <section id="contact" class="section contact">
-  <div class="contact-visual">
+  <div class="contact-visual animate-on-scroll">
     <div class="contact-text">
-      <p><strong>Let’s work together</strong></p>
+      <h5>LET'S WORK TOGETHER</h5>
       <p>Have a project in mind? Let’s talk.</p>
       <br>
         <a href="#" class="footer-link">EMAIL</a>
     </div>
-      <img src="https://ik.imagekit.io/anaclement/portfolio%20template/five.svg" alt="" aria-hidden="true" />
+    <img src="https://ik.imagekit.io/anaclement/portfolio%20template/five.svg" alt="" aria-hidden="true" />
   </div>
 </section>
 
@@ -409,9 +406,52 @@
         });
       });
 
+
+      /* --------------------------------------------------------------------------
+      Hero typing animation (sync with scroll reveal)
+      -------------------------------------------------------------------------- */
+      document.addEventListener("DOMContentLoaded", () => {
+      const typingEl = document.querySelector(".typing-text"); if (!typingEl) return;
+        const text = typingEl.dataset.text;
+        const speed = 110;
+        let index = 0;
+        let started = false;
+      const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+      ).matches;
+
+      if (prefersReducedMotion) {
+      typingEl.textContent = text;
+      return;
+      }
+
+     function type() {
+     if (index < text.length) {
+      typingEl.textContent += text.charAt(index);
+      index++;
+      setTimeout(type, speed);
+    }
+    }
+    const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting && !started) {
+        started = true;
+        type();
+        observer.disconnect();
+      }
+    },
+    { threshold: 0.6 }
+  );
+
+  observer.observe(typingEl);
+  });
+
+
+  type();
         document.querySelectorAll('.projects-carousel--reverse').forEach(carousel => {
     carousel.scrollLeft = carousel.scrollWidth;
   });
+
     </script>
   </body>
 </html>
