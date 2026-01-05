@@ -59,9 +59,9 @@
 	 */
   --color-bg: #e3e7f0; /* background */
   --color-bg-alt: #d4dae8; /*depth/sections */
-  --color-text: #1f1402;
+  --color-text: #15151a;
   --color-text-muted: #262628; /* Subdued text for secondary content */
-  --color-accent: #ff00fe; /* primary brand color */
+  --color-accent: #9c63fa; /* primary brand color */
   --color-accent-hover: #b2e840; /* hover states */
 
   /*
@@ -80,10 +80,10 @@
 
 html.dark {
   /* COLOR PALETTE – DARK */
-  --color-bg: #1f1402;
-  --color-bg-alt: #181c33;
-  --color-text: #e3e7f0;
-  --color-text-muted: #e3e7f0;
-  --color-accent: #ff00fe;
+  --color-bg: #1b1b1b;
+  --color-bg-alt: #2c2c2c;
+  --color-text: #eef1f6;
+  --color-text-muted: #d4dae8;
+  --color-accent: #9c63fa;
   --color-accent-hover: #b2e840;
 }

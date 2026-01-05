@@ -7,14 +7,12 @@
 }
 
 .section {
-  padding: var(--space-2xl) 0;
-  padding-bottom: var(--space-3xl);
 }
 
 .section-title {
   font-size: var(--text-3xl);
   font-weight: 800;
-  margin-bottom: var(--space-3xl);
+  margin-bottom: var(--space-xl);
 }
 
 /* --------------------------------------------------------------------------
@@ -256,6 +254,7 @@
    -------------------------------------------------------------------------- */
 .about {
   background: var(--color-bg);
+  padding-bottom: var(--space-3xl);
 }
 
 .about-grid {
@@ -282,7 +281,7 @@
 }
 
 .skill-card {
-  background: var(--color-bg);
+  background: var(--color-bg-alt);
   padding: var(--space-md);
   border-radius: 12px;
   text-align: center;
@@ -323,9 +322,10 @@
   overflow: hidden;
   width: 100%;
   font-weight: 700;
-  background: #fcfcfd;
-  color: #1f1402;
-  border: solid #1f1402 1px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  border-top: solid var(--color-text) 1px;
+  border-bottom: solid var(--color-text) 1px;
   padding: 0.7rem;
 }
 
@@ -353,37 +353,54 @@
 }
 
 /* --------------------------------------------------------------------------
-   8. Projects Section
-   -------------------------------------------------------------------------- */
-.projects-grid {
-  display: grid;
-  gap: var(--space-lg);
+   Projects Section – Horizontal Carousel
+-------------------------------------------------------------------------- */
+
+.projects {
+  padding: var(--space-2xl) 0 var(--space-5xl);
+  overflow-x: hidden;
+  overflow-y: visible;
 }
 
-@media (min-width: 640px) {
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+/* --- CAROUSEL --- */
+.projects-carousel {
+  display: flex;
+  gap: var(--space-xl);
+  padding: 0 var(--space-4xl);
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+
+  scrollbar-width: none;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
-@media (min-width: 1024px) {
-  .projects-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+.projects-carousel::-webkit-scrollbar {
+  display: none;
 }
 
+/* --- CARD --- */
 .project-card {
+  flex: 0 0 clamp(425px, 50vw, 460px);
   background: var(--color-bg-alt);
-  border-radius: 16px;
+  border-radius: 8px;
   overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+
+  scroll-snap-align: center;
+
+  position: relative;
+  z-index: 1;
+
+  transform-origin: center;
+  will-change: transform;
+
+  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-}
-
+/* --- IMAGE --- */
 .project-image {
   aspect-ratio: 4/3;
   overflow: hidden;
@@ -393,26 +410,30 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s;
+
+  transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.project-card:hover .project-image img {
-  transform: scale(1.05);
-}
-
+/* --- CONTENT --- */
 .project-content {
   padding: var(--space-md);
 }
 
-.project-content h3 {
-  font-size: var(--text-lg);
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: var(--space-sm);
 }
 
-.project-content p {
+.project-header h3 {
+  font-size: var(--text-lg);
+  margin: 0;
+}
+
+.project-header .subtitle {
   font-size: var(--text-sm);
   color: var(--color-text-muted);
-  margin-bottom: var(--space-md);
 }
 
 .project-tags {
@@ -429,12 +450,31 @@
   color: var(--color-accent);
 }
 
+/* --- HOVER EFFECT --- */
+.project-card:hover {
+  transform: scale(1.08);
+  z-index: 10;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.04);
+}
+
+.projects-carousel:has(.project-card:hover) .project-card:not(:hover) {
+  filter: blur(1.5px);
+  opacity: 0.8;
+  transform: scale(0.96);
+
+  transition: filter 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
+}
+
 /* --------------------------------------------------------------------------
    9. Contact Section
    -------------------------------------------------------------------------- */
 .contact {
   background: var(--color-bg-alt);
   text-align: center;
+  padding-bottom: 0;
 }
 
 .contact-content p {
@@ -462,31 +502,84 @@
 /* --------------------------------------------------------------------------
    10. Footer
    -------------------------------------------------------------------------- */
+
 .footer {
-  padding: var(--space-lg) 0;
-  text-align: center;
+  padding: var(--space-xl) 0;
+  background-color: var(--color-bg);
   color: var(--color-text-muted);
-  font-size: var(--text-sm);
 }
 
-.footer .container {
+.footer-inner {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
 }
 
+/* --- Brand block --- */
+.footer-brand {
+  display: flex;
+  align-items: center; /* clave para alineación óptica */
+  gap: var(--space-md);
+}
+
+.footer-name {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  white-space: nowrap;
+  line-height: 1;
+}
+
+/* Two-line tagline */
+.footer-tagline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: var(--text-sm);
+  line-height: 1.4;
+  max-width: 420px;
+}
+
+/* --- Right block --- */
+.footer-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+/* Social links */
+.footer-link {
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--color-text);
+}
+
+/* Back to top */
 .back-to-top {
   width: 40px;
   height: 40px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   background: var(--color-bg-alt);
   border-radius: 50%;
+  text-decoration: none;
+  color: var(--color-text);
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .back-to-top:hover {
   background: var(--color-accent-hover);
+  transform: translateY(-2px);
 }
 
 /* --------------------------------------------------------------------------
@@ -567,6 +660,26 @@
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s var(--ease-out), transform 0.5s var(--ease-out);
+}
+
+/* --- Ajuste para que las project-card no pierdan el hover --- */
+
+/* Los project-card siguen usando el sistema de stagger, pero con reglas propias */
+.projects-grid[data-reveal-stagger] > .project-card {
+  opacity: 0;
+  transform: translateY(0px);
+  transition: opacity 0.5s var(--ease-out), transform 0.5s var(--ease-out);
+}
+
+.projects-grid[data-reveal-stagger].revealed > .project-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Cuando están reveladas y haces hover, este transform gana sobre el anterior */
+.projects-grid[data-reveal-stagger].revealed > .project-card:hover {
+  transform: scale(1.15) rotateZ(var(--hover-rotation, 0deg)) rotateX(0deg)
+    translateZ(0px);
 }
 
 /*

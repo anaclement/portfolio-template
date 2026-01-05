@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e3e7f0;
+      }
+
+      .cls-2 {
+        fill: #1f1402;
+      }
+    </style>
+  </defs>
+  <g id="Capa_1-2" data-name="Capa 1">
+    <g>
+      <circle class="cls-1" cx="100" cy="100" r="100"></circle>
+      <path class="cls-2" d="M121.42,100l30.52,28.27c1.19,1.11.06,3.06-1.49,2.58l-39.74-12.3-9.22,40.56c-.36,1.59-2.62,1.59-2.98,0l-9.22-40.56-39.74,12.3c-1.56.48-2.69-1.48-1.49-2.58l30.52-28.27-30.52-28.27c-1.19-1.11-.06-3.06,1.49-2.58l39.74,12.3,9.22-40.56c.36-1.59,2.62-1.59,2.98,0l9.22,40.56,39.74-12.3c1.56-.48,2.69,1.48,1.49,2.58l-30.52,28.27Z"></path>
+    </g>
+  </g>
+</svg></svg><style>@media (prefers-color-scheme: light) { :root { filter: none; } }
+@media (prefers-color-scheme: dark) { :root { filter: none; } }
+</style></svg>
