@@ -4,7 +4,8 @@
 
 - Minimalism: Ordered, clean and structured layout
 - Neutral Palette with strong color accents
-- Interactive Elements
+- Dark Mode toggle
+- Micro-interactions: small animations on user actions
 
 ## Visual References
 

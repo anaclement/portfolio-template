@@ -6,9 +6,6 @@
   margin-inline: auto;
 }
 
-.section {
-}
-
 .section-title {
   font-size: var(--text-3xl);
   font-weight: 800;
@@ -826,5 +823,135 @@
   .footer .container {
     flex-direction: column;
     gap: var(--space-md);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   404 Page
+-------------------------------------------------------------------------- */
+
+.error-404 {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: clamp(4rem, 7vw, 7rem);
+  padding-inline: clamp(2rem, 6vw, var(--space-4xl));
+  background: var(--color-bg);
+}
+
+/* --------------------------------------------------------------------------
+   CENTER IMAGE
+-------------------------------------------------------------------------- */
+
+.error-404-visual {
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+
+.error-404-visual img {
+  width: min(250px, 50vw);
+
+  animation: errorFloat 6s ease-in-out infinite;
+
+  animation-delay: 0s, 0.8s;
+
+  will-change: transform, opacity;
+}
+
+/* Animación y rotación */
+@keyframes errorFloat {
+  0% {
+    transform: rotate(-6deg) translateY(0);
+  }
+  50% {
+    transform: rotate(6deg) translateY(-6px);
+  }
+  100% {
+    transform: rotate(-6deg) translateY(0);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   SIDE BLOCKS
+-------------------------------------------------------------------------- */
+
+.error-404-side {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.error-404-side--left {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.error-404-side--right {
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* --------------------------------------------------------------------------
+   TYPOGRAPHY
+-------------------------------------------------------------------------- */
+
+.error-404-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 950;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.error-404-subtitle {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE
+-------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  .error-404 {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    text-align: center;
+  }
+
+  .error-404-side {
+    align-items: center;
+    text-align: center;
+    max-width: none;
+  }
+
+  .error-404-visual img {
+    width: min(180px, 70vw);
+
+    /* versión en móvil */
+    animation: errorFloatMobile 6s ease-in-out infinite;
+  }
+}
+
+@keyframes errorFloatMobile {
+  0% {
+    transform: rotate(-4deg) translateY(0);
+  }
+  50% {
+    transform: rotate(4deg) translateY(-4px);
+  }
+  100% {
+    transform: rotate(-4deg) translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .error-404-visual img {
+    animation: none;
+    transform: rotate(-4deg);
+    opacity: 1;
   }
 }

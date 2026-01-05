@@ -3,7 +3,7 @@
 **Student:** Ana Clemente Camacho
 **Handle:** @anaclement
 **Course:** Web Design 2025 · Fall  
-**Date:** [Fill in date - Week 2]
+**Date:** 09-01-26
 
 ---
 
@@ -11,15 +11,11 @@
 
 ### What are you building?
 
-This stands for the final assignment for the subject Advanced Web Design. A full built portfolio template ready to be used by any creative or designer, with a clean, bold style.
-
-<!-- Describe your project in 2-3 sentences -->
+This stands for the final course project for the Advanced Web Design subject. A full built portfolio template ready to be used by any creative or designer, with a clean, bold style.
 
 ### Who is it for?
 
-The template has been design under the idea "from creatives for creatives". A
-
-<!-- Define your target audience -->
+The template has been design under the idea "from creatives for creatives".
 
 ### Why does it matter?
 
@@ -34,7 +30,6 @@ The template has been design under the idea "from creatives for creatives". A
 - [ ] HTML5 (semantic markup)
 - [ ] CSS3 (responsive design)
 - [ ] JavaScript (if applicable)
-- [ ] Other: \***\*\_\_\_\*\***
 
 ### Accessibility Goals
 
@@ -59,10 +54,11 @@ The template has been design under the idea "from creatives for creatives". A
 
 ### Key Sections/Pages
 
-1. Home Page
-2. Projects Display Page
-3. Contact Page
-4. 404 Page
+1. Hero Section
+2. About Section
+3. Projects Display Section
+4. Contact Section
+5. 404 Page
 
 ### Content Sources
 
@@ -71,8 +67,6 @@ The template has been design under the idea "from creatives for creatives". A
 ### Multilingual Considerations
 
 - Primary language: English
-- Secondary language (optional): Spanish
-- Translation strategy:
 
 ---
 
@@ -92,7 +86,9 @@ The template has been design under the idea "from creatives for creatives". A
 
 ### Inspiration/References
 
-<!-- List 2-3 websites or designs that inspire your approach -->
+- [https://rafter.work/](https://rafter.work/)
+- [https://gustavo.work/](https://gustavo.work/)
+- [https://momma.film/](https://momma.film/)
 
 ---
 
