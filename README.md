@@ -2,11 +2,13 @@
 
 "Portfolio Template" stands for the final course project for the Advanced Web Design subject.
 
-**Autor:** Ana Clemente Camacho (UDIT – Universidad de Diseño, Innovación y Tecnología)
+**Autor:** Made by Ana Clemente Camacho (UDIT – Universidad de Diseño, Innovación y Tecnología)
+You can find the project deployed here: [https://anaclement.github.io/portfolio-template/](https://anaclement.github.io/portfolio-template/)
+by @anaclement
 
 ## Purpose and Audience
 
-    -**For Students:** A challenge to put in practice everything learned in a free and personalized manner.
+    -**For Students:** A challenge to put in practice everything learned in class through a single, complex project.
 
     -**Purpose:** To create an editable portfolio template based on the knowledge and techniques adquired during the whole term. The main goal was to make it customized, responsive and interactive for the user it has been designed for.
 
@@ -14,12 +16,14 @@
 
 1.  Creating the new repository and sharing it with the teacher.
 2.  Organization of the folder pages and docs.
-3.  Creation of wireframes and discussion of ideas.
+3.  Looking for references, brainstorming and creation of wireframes.
 4.  Illustration of the different elements needed.
-5.  Creating the main code with Html, CSS, Javascript and different asset and icon folders.
-6.  Adding texts and interactive buttons.
-7.  Make it responsive.
-8.  Making sure the web was working properly across various devices and browsers.
+5.  Modification of the main code with Html, CSS, Javascript and different asset and icon folders.
+6.  Modification of the texts, buttons and addition of the toggles and typography.
+7.  Responsiveness, animations and micro-interactions.
+8.  Creation of the 404, License and Readme Pages.
+9.  Final touches and modifications. Check of errors.
+10. Making sure the web was working properly across various devices and browsers.
 
 ## Repository Structure
 
@@ -59,6 +63,3 @@ portfolio-template/
 - **Content:** CC BY-NC 4.0 — see `LICENSE-CONTENT`
 
 © 2025 Ana Clemente Camacho
-
-You can find the project deployed here: [https://anaclement.github.io/portfolio-template/](https://anaclement.github.io/portfolio-template/)
-by @anaclement

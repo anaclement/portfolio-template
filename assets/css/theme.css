@@ -54,7 +54,7 @@
   /*
 	 * COLOR PALETTE
 	 *
-	 * Dark theme with indigo accent. Limited palette = cohesive design.
+	 * Light theme. Limited palette = cohesive design.
 	 * Semantic naming (bg, text, accent) makes colors self-documenting.
 	 */
   --color-bg: #e3e7f0; /* background */
@@ -62,7 +62,7 @@
   --color-text: #15151a;
   --color-text-muted: #262628; /* Subdued text for secondary content */
   --color-accent: #9c63fa; /* primary brand color */
-  --color-accent-hover: #b2e840; /* hover states */
+  --color-accent-hover: #b2e840; /* secondary brand color */
 
   /*
 	 * ANIMATION TOKENS

@@ -44,7 +44,7 @@
 
 /* --------------------------------------------------------------------------
    Hero typing effect
--------------------------------------------------------------------------- */
+ -------------------------------------------------------------------------- */
 
 .hero-title--typing {
   position: relative;
@@ -64,14 +64,14 @@
   animation: blink 1s steps(1) infinite;
 }
 
-/* Cursor parpadeo */
+/* Parpadeo cursor */
 @keyframes blink {
   50% {
     opacity: 0;
   }
 }
 
-/* Accesibilidad: reduce motion */
+/* Reduce motion para accesibilidad*/
 @media (prefers-reduced-motion: reduce) {
   .typing-text::after {
     animation: none;
@@ -118,8 +118,8 @@
   inset: 0;
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* antes center */
-  padding-top: 50vh; /* controla cuánto bajan */
+  align-items: flex-start;
+  padding-top: 50vh;
   pointer-events: none;
   z-index: 0;
 }
@@ -299,32 +299,33 @@
 
 .about-grid {
   display: grid;
-  gap: var(--space-3xl);
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: var(--space-lg);
+  align-items: center;
 }
 
-@media (min-width: 768px) {
-  .about-grid {
-    grid-template-columns: 1fr 2fr;
-    align-items: center;
-  }
+.about-image img {
+  width: min(255px, 50vw);
 }
 
-.about-text p {
-  margin-bottom: var(--space-md);
-  color: var(--color-text-muted);
+.about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding: var(--space-md);
 }
 
 .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column; /* para apilar en vertical */
+  justify-content: center;
   gap: var(--space-md);
 }
 
 .skill-card {
   background: var(--color-bg-alt);
-  padding: var(--space-lg);
+  padding: var(--space-md);
   border-radius: 8px;
-  text-align: center;
 }
 
 .skill-card h3 {
@@ -350,6 +351,29 @@
 /* Animate skill bars when revealed */
 [data-reveal-stagger].revealed .skill-fill {
   width: var(--fill);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr; /* para apilar en vertical */
+    gap: var(--space-xl);
+  }
+
+  .about-image img {
+    aspect-ratio: auto;
+    width: 100%;
+  }
+
+  .skills-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+
+  .skill-card {
+    flex: 1 1 45%;
+  }
 }
 
 .ticker {
@@ -513,7 +537,7 @@
 }
 
 .projects-block + .projects-block {
-  margin-top: var(--space-xl); /* ajusta aquí */
+  margin-top: var(--space-xl);
 }
 
 /* --------------------------------------------------------------------------
@@ -598,7 +622,7 @@
 /* --- Brand block --- */
 .footer-brand {
   display: flex;
-  align-items: center; /* clave para alineación óptica */
+  align-items: center; /* para alinear */
   gap: var(--space-md);
 }
 
@@ -755,7 +779,7 @@
   transform: translateY(0);
 }
 
-/* Cuando están reveladas y haces hover, este transform gana sobre el anterior */
+/* Para que al hacer hover, queden por encima del resto */
 .projects-grid[data-reveal-stagger].revealed > .project-card:hover {
   transform: scale(1.15) rotateZ(var(--hover-rotation, 0deg)) rotateX(0deg)
     translateZ(0px);
@@ -879,7 +903,6 @@
 /* --------------------------------------------------------------------------
    404 Page
 -------------------------------------------------------------------------- */
-
 .error-404 {
   min-height: 100vh;
   display: grid;
@@ -893,7 +916,6 @@
 /* --------------------------------------------------------------------------
    CENTER IMAGE
 -------------------------------------------------------------------------- */
-
 .error-404-visual {
   display: grid;
   place-items: center;
@@ -924,9 +946,8 @@
 }
 
 /* --------------------------------------------------------------------------
-   SIDE BLOCKS
+   SIDE TEXTS
 -------------------------------------------------------------------------- */
-
 .error-404-side {
   display: flex;
   flex-direction: column;
@@ -946,7 +967,6 @@
 /* --------------------------------------------------------------------------
    TYPOGRAPHY
 -------------------------------------------------------------------------- */
-
 .error-404-title {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 950;
@@ -962,9 +982,8 @@
 }
 
 /* --------------------------------------------------------------------------
-   RESPONSIVE
+   RESPONSIVENESS
 -------------------------------------------------------------------------- */
-
 @media (max-width: 768px) {
   .error-404 {
     grid-template-columns: 1fr;

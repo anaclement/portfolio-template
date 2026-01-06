@@ -78,11 +78,14 @@ The template has been design under the idea "from creatives for creatives".
 
 ### Color Palette
 
-<!-- List your main colors -->
+1. Light Purple
+2. Dark Grey
+3. Bright Purple
+4. Neon Green
 
 ### Typography
 
-<!-- What fonts/typeface approach will you use? -->
+- DM Sans Font (Sans Serif, Geometrical and Legible)
 
 ### Inspiration/References
 
