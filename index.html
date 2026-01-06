@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="HTML, CSS, desarrollo web, SEO, accesibilidad"
+    />
+    <meta name="author" content="Ana Clemente" />
+    <meta name="robots" content="noindex" />
+
     <title>Portfolio Template</title>
     <link rel="stylesheet" href="./assets/css/index.css" />
     <script src="./assets/js/main.js" defer></script>
@@ -33,7 +40,7 @@
     <!-- Skip link for accessibility -->
     <a href="#main" class="skip-link">Skip to main content</a>
 
-    <!-- Navigation -->
+    <!-- Navigation bar -->
     <nav class="nav">
       <div class="nav-container">
         <button
@@ -58,7 +65,7 @@
         <div class="hero-bg parallax-bg"></div>
         <div class="hero-content">
           <h1 class="hero-title hero-title--typing">
-            <span class="typing-text" data-text="DESIGNER NAME" aria-label="DESIGNER NAME"></span>
+            <span class="typing-text" data-text="DESIGNER NAME"></span>
           </h1>
 
           <div class="hero-row">
@@ -90,36 +97,54 @@
       <section id="about" class="section about">
         <div class="container">
           <h1 class="section-title2 animate-on-scroll">ABOUT ME</h1>
-          <div class="about-grid">
-            <div class="about-text animate-on-scroll">
+
+          <div class="about-grid animate-on-scroll">
+            <!-- Imagen cuadrada -->
+            <div class="about-image">
+              <img
+                src="https://ik.imagekit.io/anaclement/portfolio%20template/about%20image.svg"
+                alt="about me image"
+              />
+            </div>
+
+            <!-- Texto centrado -->
+            <div class="about-text">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit congue dictum in, inceptos platea quam ut sem nullam facilisis ultrices sed, posuere tempus risus.
-              <p>
-                Erat justo sociis mollis non nisl vulputate turpis, auctor aptent sem vehicula quam consequat dis lectus, suscipit pellentesque euismod convallis molestie hac. Gravida cras tincidunt ad convallis odio tempus bibendum sociis, cubilia est purus facilisi vehicula dictum parturient, praesent rutrum quis. 
+                Lorem ipsum dolor sit amet consectetur adipiscing, elit potenti
+                purus pretium semper nisl erat, molestie enim nisi a ultricies.
+                Consequat convallis molestie viverra aliquet felis gravida
+                varius, sociosqu scelerisque ullamcorper vulputate pretium
+                augue, euismod neque potenti et auctor velit.
               </p>
+              <br />
+              <p>
+                Cras duis habitasse class facilisi taciti semper platea nostra
+                conubia iaculis, felis non habitant justo enim tortor orci vel.
+                Nostra senectus justo nam netus habitant vel quisque, odio dui
+                nascetur luctus iaculis tempor penatibus, rhoncus sapien duis
+                mattis lacinia consequat. Eu varius mus quisque purus magnis
+                sagittis potenti, venenatis quam vehicula eleifend pulvinar
+                interdum gravida fermentum, posuere ullamcorper nulla felis at
+                arcu.
               </p>
             </div>
+
+            <!-- Tarjetas de habilidades -->
             <div class="skills-grid" data-reveal-stagger>
               <div class="skill-card">
                 <h3>ADOBE SUITE</h3>
+                <div class="skill-bar">
+                  <div class="skill-fill" style="--fill: 95%"></div>
+                </div>
+              </div>
+              <div class="skill-card">
+                <h3>WEB DEVELOPMENT</h3>
                 <div class="skill-bar">
                   <div class="skill-fill" style="--fill: 90%"></div>
                 </div>
               </div>
               <div class="skill-card">
                 <h3>AUDIOVISUALS</h3>
-                <div class="skill-bar">
-                  <div class="skill-fill" style="--fill: 85%"></div>
-                </div>
-              </div>
-              <div class="skill-card">
-                <h3>3D DESIGN</h3>
-                <div class="skill-bar">
-                  <div class="skill-fill" style="--fill: 75%"></div>
-                </div>
-              </div>
-              <div class="skill-card">
-                <h3>WEB DEVELOPMENT</h3>
                 <div class="skill-bar">
                   <div class="skill-fill" style="--fill: 85%"></div>
                 </div>
@@ -149,253 +174,265 @@
         </div>
       </div>
 
-<!-- Projects Section -->
-<section id="projects" class="section projects">
+      <!-- Projects Section -->
+      <section id="projects" class="section projects">
+        <!-- ===== BLOQUE 1 · WORKS ===== -->
+        <div class="projects-block">
+          <div class="container">
+            <h2 class="section-title animate-on-scroll">WORKS 2025</h2>
+          </div>
 
-  <!-- ===== BLOQUE 1 · WORKS ===== -->
-  <div class="projects-block">
+          <div class="projects-carousel animate-on-scroll">
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                  src="https://ik.imagekit.io/anaclement/portfolio%20template/imagen%20example.svg"
+                  alt="web design project. image example"
+                />
+              </div>
+              <div class="project-content">
+                <div class="project-header">
+                  <h3>PROJECT 01</h3>
+                  <span class="subtitle">Brief explanation here</span>
+                </div>
+                <div class="project-tags">
+                  <span>WEB DESIGN</span>
+                </div>
+              </div>
+            </article>
 
-    <div class="container">
-      <h2 class="section-title animate-on-scroll">WORKS 2025</h2>
-    </div>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                  src="https://ik.imagekit.io/anaclement/portfolio%20template/imagen%20example.svg"
+                  alt="branding project. image example"
+                />
+              </div>
+              <div class="project-content">
+                <div class="project-header">
+                  <h3>PROJECT 02</h3>
+                  <span class="subtitle">Brief explanation here</span>
+                </div>
+                <div class="project-tags">
+                  <span>BRANDING</span>
+                </div>
+              </div>
+            </article>
 
-    <div class="projects-carousel animate-on-scroll">
-      <article class="project-card">
-        <div class="project-image">
-          <img src="https://ik.imagekit.io/anaclement/portfolio%20template/imagen%20example.svg" alt="web design project. image example" />
-        </div>
-        <div class="project-content">
-          <div class="project-header">
-            <h3>PROJECT 01</h3>
-            <span class="subtitle">Brief explanation here</span>
-          </div>
-          <div class="project-tags">
-            <span>WEB DESIGN</span>
-          </div>
-        </div>
-      </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                  src="https://ik.imagekit.io/anaclement/portfolio%20template/imagen%20example.svg"
+                  alt="3d project. image example"
+                />
+              </div>
+              <div class="project-content">
+                <div class="project-header">
+                  <h3>PROJECT 03</h3>
+                  <span class="subtitle">Brief explanation here</span>
+                </div>
+                <div class="project-tags">
+                  <span>MOTION & 3D</span>
+                </div>
+              </div>
+            </article>
 
-      <article class="project-card">
-        <div class="project-image">
-          <img src="https://ik.imagekit.io/anaclement/portfolio%20template/imagen%20example.svg" alt="branding project. image example" />
-        </div>
-        <div class="project-content">
-          <div class="project-header">
-            <h3>PROJECT 02</h3>
-            <span class="subtitle">Brief explanation here</span>
-          </div>
-          <div class="project-tags">
-            <span>BRANDING</span>
-          </div>
-        </div>
-      </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                  src="https://ik.imagekit.io/anaclement/portfolio%20template/imagen%20example.svg"
+                  alt="editorial project. image example"
+                />
+              </div>
+              <div class="project-content">
+                <div class="project-header">
+                  <h3>PROJECT 04</h3>
+                  <span class="subtitle">Brief explanation here</span>
+                </div>
+                <div class="project-tags">
+                  <span>EDITORIAL</span>
+                </div>
+              </div>
+            </article>
 
-      <article class="project-card">
-        <div class="project-image">
-          <img src="https://ik.imagekit.io/anaclement/portfolio%20template/imagen%20example.svg" alt="3d project. image example" />
-        </div>
-        <div class="project-content">
-          <div class="project-header">
-            <h3>PROJECT 03</h3>
-            <span class="subtitle">Brief explanation here</span>
-          </div>
-          <div class="project-tags">
-            <span>MOTION & 3D</span>
-          </div>
-        </div>
-      </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                  src="https://ik.imagekit.io/anaclement/portfolio%20template/imagen%20example.svg"
+                  alt="packaging project. image example"
+                />
+              </div>
+              <div class="project-content">
+                <div class="project-header">
+                  <h3>PROJECT 05</h3>
+                  <span class="subtitle">Brief explanation here</span>
+                </div>
+                <div class="project-tags">
+                  <span>PACKAGING</span>
+                </div>
+              </div>
+            </article>
 
-      <article class="project-card">
-        <div class="project-image">
-          <img src="https://ik.imagekit.io/anaclement/portfolio%20template/imagen%20example.svg" alt="editorial project. image example" />
-        </div>
-        <div class="project-content">
-          <div class="project-header">
-            <h3>PROJECT 04</h3>
-            <span class="subtitle">Brief explanation here</span>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                  src="https://ik.imagekit.io/anaclement/portfolio%20template/imagen%20example.svg"
+                  alt="illustration project. image example"
+                />
+              </div>
+              <div class="project-content">
+                <div class="project-header">
+                  <h3>PROJECT 06</h3>
+                  <span class="subtitle">Brief explanation here</span>
+                </div>
+                <div class="project-tags">
+                  <span>ILLUSTRATION</span>
+                </div>
+              </div>
+            </article>
           </div>
-          <div class="project-tags">
-            <span>EDITORIAL</span>
-          </div>
         </div>
-      </article>
 
-      <article class="project-card">
-        <div class="project-image">
-          <img src="https://ik.imagekit.io/anaclement/portfolio%20template/imagen%20example.svg" alt="packaging project. image example" />
-        </div>
-        <div class="project-content">
-          <div class="project-header">
-            <h3>PROJECT 05</h3>
-            <span class="subtitle">Brief explanation here</span>
+        <!-- ===== BLOQUE 2 · ARCHIVE (REVERSE) ===== -->
+        <div class="projects-block projects-block--reverse">
+          <div class="container">
+            <h2 class="section-title section-title--right animate-on-scroll">
+              ARCHIVE 2020'S
+            </h2>
           </div>
-          <div class="project-tags">
-            <span>PACKAGING</span>
-          </div>
-        </div>
-      </article>
 
-      <article class="project-card">
-        <div class="project-image">
-          <img src="https://ik.imagekit.io/anaclement/portfolio%20template/imagen%20example.svg" alt="illustration project. image example" />
-        </div>
-        <div class="project-content">
-          <div class="project-header">
-            <h3>PROJECT 06</h3>
-            <span class="subtitle">Brief explanation here</span>
-          </div>
-          <div class="project-tags">
-            <span>ILLUSTRATION</span>
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
+          <div
+            class="projects-carousel projects-carousel--reverse animate-on-scroll"
+          >
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                  src="https://ik.imagekit.io/anaclement/portfolio%20template/imagen%20example.svg"
+                  alt="web design project. image example"
+                />
+              </div>
+              <div class="project-content">
+                <div class="project-header">
+                  <h3>PROJECT 01</h3>
+                  <span class="subtitle">Brief explanation here</span>
+                </div>
+                <div class="project-tags">
+                  <span>WEB DESIGN</span>
+                </div>
+              </div>
+            </article>
 
-  <!-- ===== BLOQUE 2 · ARCHIVE (REVERSE) ===== -->
-  <div class="projects-block projects-block--reverse ">
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                  src="https://ik.imagekit.io/anaclement/portfolio%20template/imagen%20example.svg"
+                  alt="branding project. image example"
+                />
+              </div>
+              <div class="project-content">
+                <div class="project-header">
+                  <h3>PROJECT 02</h3>
+                  <span class="subtitle">Brief explanation here</span>
+                </div>
+                <div class="project-tags">
+                  <span>BRANDING</span>
+                </div>
+              </div>
+            </article>
 
-    <div class="container">
-      <h2 class="section-title section-title--right animate-on-scroll">ARCHIVE 2020'S</h2>
-    </div>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                  src="https://ik.imagekit.io/anaclement/portfolio%20template/imagen%20example.svg"
+                  alt="3d project. image example"
+                />
+              </div>
+              <div class="project-content">
+                <div class="project-header">
+                  <h3>PROJECT 03</h3>
+                  <span class="subtitle">Brief explanation here</span>
+                </div>
+                <div class="project-tags">
+                  <span>MOTION & 3D</span>
+                </div>
+              </div>
+            </article>
 
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                  src="https://ik.imagekit.io/anaclement/portfolio%20template/imagen%20example.svg"
+                  alt="editorial project. image example"
+                />
+              </div>
+              <div class="project-content">
+                <div class="project-header">
+                  <h3>PROJECT 04</h3>
+                  <span class="subtitle">Brief explanation here</span>
+                </div>
+                <div class="project-tags">
+                  <span>EDITORIAL</span>
+                </div>
+              </div>
+            </article>
 
-    <div class="projects-carousel projects-carousel--reverse animate-on-scroll">
-      <article class="project-card">
-        <div class="project-image">
-          <img src="https://ik.imagekit.io/anaclement/portfolio%20template/imagen%20example.svg" alt="web design project. image example" />
-        </div>
-        <div class="project-content">
-          <div class="project-header">
-            <h3>PROJECT 01</h3>
-            <span class="subtitle">Brief explanation here</span>
-          </div>
-          <div class="project-tags">
-            <span>WEB DESIGN</span>
-          </div>
-        </div>
-      </article>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                  src="https://ik.imagekit.io/anaclement/portfolio%20template/imagen%20example.svg"
+                  alt="packaging project. image example"
+                />
+              </div>
+              <div class="project-content">
+                <div class="project-header">
+                  <h3>PROJECT 05</h3>
+                  <span class="subtitle">Brief explanation here</span>
+                </div>
+                <div class="project-tags">
+                  <span>PACKAGING</span>
+                </div>
+              </div>
+            </article>
 
-      <article class="project-card">
-        <div class="project-image">
-          <img src="https://ik.imagekit.io/anaclement/portfolio%20template/imagen%20example.svg" alt="branding project. image example" />
-        </div>
-        <div class="project-content">
-          <div class="project-header">
-            <h3>PROJECT 02</h3>
-            <span class="subtitle">Brief explanation here</span>
-          </div>
-          <div class="project-tags">
-            <span>BRANDING</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-image">
-          <img src="https://ik.imagekit.io/anaclement/portfolio%20template/imagen%20example.svg" alt="3d project. image example" />
-        </div>
-        <div class="project-content">
-          <div class="project-header">
-            <h3>PROJECT 03</h3>
-            <span class="subtitle">Brief explanation here</span>
-          </div>
-          <div class="project-tags">
-            <span>MOTION & 3D</span>
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                  src="https://ik.imagekit.io/anaclement/portfolio%20template/imagen%20example.svg"
+                  alt="illustration project. image example"
+                />
+              </div>
+              <div class="project-content">
+                <div class="project-header">
+                  <h3>PROJECT 06</h3>
+                  <span class="subtitle">Brief explanation here</span>
+                </div>
+                <div class="project-tags">
+                  <span>ILLUSTRATION</span>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-image">
-          <img src="https://ik.imagekit.io/anaclement/portfolio%20template/imagen%20example.svg" alt="editorial project. image example" />
-        </div>
-        <div class="project-content">
-          <div class="project-header">
-            <h3>PROJECT 04</h3>
-            <span class="subtitle">Brief explanation here</span>
-          </div>
-          <div class="project-tags">
-            <span>EDITORIAL</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-image">
-          <img src="https://ik.imagekit.io/anaclement/portfolio%20template/imagen%20example.svg" alt="packaging project. image example" />
-        </div>
-        <div class="project-content">
-          <div class="project-header">
-            <h3>PROJECT 05</h3>
-            <span class="subtitle">Brief explanation here</span>
-          </div>
-          <div class="project-tags">
-            <span>PACKAGING</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-image">
-          <img src="https://ik.imagekit.io/anaclement/portfolio%20template/imagen%20example.svg" alt="illustration project. image example" />
-        </div>
-        <div class="project-content">
-          <div class="project-header">
-            <h3>PROJECT 06</h3>
-            <span class="subtitle">Brief explanation here</span>
-          </div>
-          <div class="project-tags">
-            <span>ILLUSTRATION</span>
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
-      
-    </div>
-  </div>
-
-</section>
-
+      </section>
 
       <!-- Contact Section -->
 
-<section id="contact" class="section contact">
-  <div class="contact-visual animate-on-scroll">
-    <div class="contact-text">
-      <h5>LET'S WORK TOGETHER</h5>
-      <p>Have a project in mind? Let’s talk.</p>
-      <br>
-        <a href="#" class="footer-link">EMAIL</a>
-    </div>
-    <img src="https://ik.imagekit.io/anaclement/portfolio%20template/five.svg" alt="" aria-hidden="true" />
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="container footer-inner">
-        <!-- Left -->
-        <div class="footer-brand">
-          <span class="footer-name">DESIGNER NAME</span>
-
-          <div class="footer-tagline">
-            <span>ALL RIGHTS RESERVED.</span>
-            <span>2026. BUILT WITH HTML, CSS & JS.</span>
+      <section id="contact" class="section contact">
+        <div class="contact-visual animate-on-scroll">
+          <div class="contact-text">
+            <h5>LET'S WORK TOGETHER</h5>
+            <p>Have a project in mind? Let’s talk.</p>
+            <br />
+            <a href="#" class="footer-link">EMAIL</a>
           </div>
+          <img
+            src="https://ik.imagekit.io/anaclement/portfolio%20template/five.svg"
+            alt=""
+            aria-hidden="true"
+          />
         </div>
-
-        <!-- Right -->
-        <div class="footer-actions">
-          <a href="https://github.com/anaclement/portfolio-template/tree/main" target="_blank" class="footer-link">GITHUB</a>
-          <a href="#" class="footer-link">INSTAGRAM</a>
-          <a href="#" class="footer-link">LINKEDIN</a>
-
-          <a href="#main" class="back-to-top" aria-label="Back to top">↑</a>
-        </div>
-      </div>
-    </footer>
-
+      </section>
+    </main>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const toggle = document.getElementById("theme-toggle");
@@ -406,52 +443,80 @@
         });
       });
 
-
       /* --------------------------------------------------------------------------
       Hero typing animation (sync with scroll reveal)
-      -------------------------------------------------------------------------- */
+    -------------------------------------------------------------------------- */
       document.addEventListener("DOMContentLoaded", () => {
-      const typingEl = document.querySelector(".typing-text"); if (!typingEl) return;
+        const typingEl = document.querySelector(".typing-text");
+        if (!typingEl) return;
         const text = typingEl.dataset.text;
         const speed = 110;
         let index = 0;
         let started = false;
-      const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-      ).matches;
 
-      if (prefersReducedMotion) {
-      typingEl.textContent = text;
-      return;
-      }
+        const prefersReducedMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)"
+        ).matches;
 
-     function type() {
-     if (index < text.length) {
-      typingEl.textContent += text.charAt(index);
-      index++;
-      setTimeout(type, speed);
-    }
-    }
-    const observer = new IntersectionObserver(
-    ([entry]) => {
-      if (entry.isIntersecting && !started) {
-        started = true;
-        type();
-        observer.disconnect();
-      }
-    },
-    { threshold: 0.6 }
-  );
+        if (prefersReducedMotion) {
+          typingEl.textContent = text;
+          return;
+        }
 
-  observer.observe(typingEl);
-  });
+        function type() {
+          if (index < text.length) {
+            typingEl.textContent += text.charAt(index);
+            index++;
+            setTimeout(type, speed);
+          }
+        }
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            if (entry.isIntersecting && !started) {
+              started = true;
+              type();
+              observer.disconnect();
+            }
+          },
+          { threshold: 0.6 }
+        );
 
+        observer.observe(typingEl);
+      });
 
-  type();
-        document.querySelectorAll('.projects-carousel--reverse').forEach(carousel => {
-    carousel.scrollLeft = carousel.scrollWidth;
-  });
-
+      type();
+      document
+        .querySelectorAll(".projects-carousel--reverse")
+        .forEach((carousel) => {
+          carousel.scrollLeft = carousel.scrollWidth;
+        });
     </script>
   </body>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <!-- Left -->
+      <div class="footer-brand">
+        <span class="footer-name">DESIGNER NAME</span>
+
+        <div class="footer-tagline">
+          <span>ALL RIGHTS RESERVED.</span>
+          <span>2026. BUILT WITH HTML, CSS & JS.</span>
+        </div>
+      </div>
+
+      <!-- Right -->
+      <div class="footer-actions">
+        <a
+          href="https://github.com/anaclement/portfolio-template/tree/main"
+          target="_blank"
+          class="footer-link"
+          >GITHUB</a
+        >
+        <a href="#" class="footer-link">INSTAGRAM</a>
+        <a href="#" class="footer-link">LINKEDIN</a>
+
+        <a href="#main" class="back-to-top" aria-label="Back to top">↑</a>
+      </div>
+    </div>
+  </footer>
 </html>
