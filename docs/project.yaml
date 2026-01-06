@@ -2,27 +2,27 @@
 # This file will be used to generate your entry in the course showroom
 
 # Basic information
-handle: your-github-username
-name: Your Full Name
-email: your-email@udit.es
+handle: anaclement
+name: Ana Clemente Camacho
+email: ana.clemente@alumnos.udit.es
 
 # URLs (will be auto-generated if you follow naming conventions)
-github_url: https://github.com/your-username
-project_url: https://your-username.github.io/your-project-repo
-repository_url: https://github.com/your-username/your-project-repo
+github_url: https://github.com/anaclement
+project_url: https://github.com/anaclement/portfolio-template
+repository_url: https://github.com/anaclement?tab=repositories
 
 # Project details
 title:
-  es: Título de tu Proyecto en Español
-  en: Your Project Title in English
+  es: Plantilla para Portfolio Creativo Personalizable
+  en: Customizable Creative Portfolio Template
 
 abstract:
   es: |
-    Una descripción concisa de tu proyecto web en español. 
-    Explica qué construyes, para quién y por qué es importante.
+    Una plantilla completa de portfolio creada para ser utilizada por cualquier creativo o diseñador como página web personal. 
+    Una plantilla diseñada bajo el lema de "de creativos para creativos", y enfocada principalmente en la usabilidad y rendimiento.
   en: |
-    A concise description of your web project in English.
-    Explain what you're building, for whom, and why it matters.
+    A fully developed portfolio template conceived for creatives and designers as a personal website. 
+    Built on the idea of “from creatives to creatives,” it combines a carefully considered design with a strong focus on usability and performance.
 
 # Technical tags (choose relevant ones)
 tags:
@@ -30,21 +30,24 @@ tags:
   - css3
   - responsive-design
   - accessibility
-  # Add more as relevant: javascript, sass, performance, etc.
 
 # Learning objectives you're focusing on
 learning_focus:
   - semantic-html
-  - mobile-first-design
   - web-accessibility
-  # Add more as you progress
+  - microinteractions
+  - performance-optimization
+  - clean design
+  - storytelling
 
 # Week tracking (update as you go)
 milestones:
-  week_1_setup: false
-  week_2_brief: false
-  week_4_metadata: false
-  week_5_showcase: false
+  week_1_setup: true
+  week_2_brief: true
+  week_4_metadata: true
+  week_5_showcase: true
 
-# Optional: link to your project brief
-brief_url: project-brief.md
+---
+permalink: /404.html
+---
+

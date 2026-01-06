@@ -11,11 +11,11 @@
 
 ### What are you building?
 
-This stands for the final course project for the Advanced Web Design subject. A full built portfolio template ready to be used by any creative or designer, with a clean, bold style.
+This website stands for the final course project for the Advanced Web Design subject. A fully built portfolio template, ready to be used by any creative professional or designer, developed with a clean and bold aesthetic and a strong focus on usability and performance.
 
 ### Who is it for?
 
-The template has been design under the idea "from creatives for creatives".
+The template has been exclusively designed under the idea of "from creatives to creatives".
 
 ### Why does it matter?
 
@@ -58,7 +58,7 @@ The template has been design under the idea "from creatives for creatives".
 2. About Section
 3. Projects Display Section
 4. Contact Section
-5. 404 Page
+5. 404 ERROR Page
 
 ### Content Sources
 
@@ -74,18 +74,21 @@ The template has been design under the idea "from creatives for creatives".
 
 ### Visual Style
 
-<!-- Describe your aesthetic approach -->
+1. Clean and Minimalistic
+2. Analogic Visual Style
+3. Simple yet Strinking Design
+4. Typography and Illustration protagonism
 
 ### Color Palette
 
-1. Light Purple
-2. Dark Grey
-3. Bright Purple
-4. Neon Green
+1. Extra Light Purple (as white base)
+2. Dark Grey (as contrast color)
+3. Bright Purple (as main accent color)
+4. Neon Green (as complementary accent color)
 
 ### Typography
 
-- DM Sans Font (Sans Serif, Geometrical and Legible)
+- DM Sans Font (Sans Serif Typography that stands for its Geometrical and Legible features)
 
 ### Inspiration/References
 
@@ -116,12 +119,12 @@ The template has been design under the idea "from creatives for creatives".
 
 ## Reflection Questions
 
-### What excites you most about this project?
-
 ### What challenges do you anticipate?
+
+More than the design and programming process itself, I find the greatest challenge lies in those sections directly tied to highly technical, pure code concepts we had not previously worked with.
 
 ### How does this project connect to your learning goals?
 
----
+It allows me to put into real practice everything we have learned in class. I have noticed that it has significantly helped me to visualize every stage of a web programming project: from the start to the final details and refinements ensuring that the site functions properly in all aspects (including accessibility, performance, and loading efficiency)
 
-_This brief will evolve as your project develops. Update it as needed and reference it in your weekly commits._
+---
