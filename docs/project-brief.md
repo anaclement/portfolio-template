@@ -19,7 +19,7 @@ The template has been exclusively designed under the idea of "from creatives to 
 
 ### Why does it matter?
 
-<!-- Explain the purpose and value of your project -->
+This template is designed to serve as a practical and customizable tool for creatives of all kinds. Simple yet thoughtfully crafted, it combines a clean structure with a unique, analog-inspired style. Every detail has been considered, ensuring a responsive experience, intuitive navigation and storytelling, and a clear strategy to stand out among the competence.
 
 ---
 
