@@ -16,4 +16,4 @@
 
 ## Theme Draft
 
-[Your project’s core concept—what it’s about]
+This project explores the core concept of creating a versatile, minimal, and visually coherent web template for creatives. I'm looking for it to focus on clarity, usability, and style, offering a structured yet flexible base that allows users to showcase their work while maintaining a unique, analog-inspired aesthetic.
